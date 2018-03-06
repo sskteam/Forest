@@ -1,12 +1,39 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/getGoods/getGoods",
+    "pages/setGoods/setGoods",
+    "pages/my/my"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#21a2fd",
+    "navigationBarTitleText": "森林智能冷柜",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bbb",
+    "selectedColor": "#1A6EA5",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/getGoods/getGoods",
+        "text": "取件",
+        "iconPath":"pages/img/get2.png",
+        "selectedIconPath":"pages/img/get.png"
+      },
+      {
+        "pagePath": "pages/setGoods/setGoods",
+        "text": "递件",
+        "iconPath": "pages/img/set2.png",
+        "selectedIconPath": "pages/img/set.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "pages/img/my.jpg",
+        "selectedIconPath": "pages/img/my_w.jpg"
+      }
+    ]
   }
 }

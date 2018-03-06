@@ -1,0 +1,119 @@
+<!--pages/home/index.wxml-->
+<view class="container background-gray">
+  <view class="header">
+    <view class="user">
+      <view class="user-avatar">
+        <image src="{{userInfo.relate_user_mobile ? (userInfo.relate_user_avarta ? userInfo.relate_user_avarta :'images/123.png') : userInfo.avatarUrl}}"></image>
+
+      </view>
+      <view class="user-name"> 
+        <view class='user-name1'>{{userInfo.relate_user_mobile ? (userInfo.relate_user_nickname ? userInfo.relate_user_nickname : mobile) :userInfo.nickName }}</view>
+        <navigator url='pages/integral/integral' class='myintegral'>
+          <view>王凯</view>
+        </navigator>
+      </view>
+      <view class='bindaccount' catchtap='goBindAccount'>
+        <view wx:if="{{isGo}}">同步已有账号</view>
+        <view wx:else>
+            <view>已同步账号</view>
+            <view class='phone'>{{mobile}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="order">
+    <navigator url="pages/order/order?type=1">
+      <image src="images/wallet-1.png"></image>
+      <view>取件记录</view>
+      <view class='order_num' wx:if="{{userInfo.waite_pay}}">{{userInfo.waite_pay}}</view>
+    </navigator>
+    <navigator url="pages/order/order?type=2">
+      <image src="images/pd-1.png"></image>
+      <view>递件记录</view>
+       <view class='order_num' wx:if="{{userInfo.waite_shipping}}">{{userInfo.waite_shipping}}</view>
+    </navigator>
+    <navigator url="pages/order/order?type=3">
+      <image src="images/dis-1.png"></image>
+      <view>优惠劵</view>
+      <view class='order_num' wx:if="{{userInfo.shipping}}">{{userInfo.shipping}}</view>
+    </navigator>
+    <navigator url="pages/order/order?type=4">
+      <image src="images/dis-3.png"></image>
+      <view>积分</view>
+      <view class='order_num' wx:if="{{userInfo.wait_comment}}">{{userInfo.wait_comment}}</view>
+    </navigator>
+  </view>
+  <view class="background-gray"></view>
+  <view class="item-list">
+    <navigator class="item my-coupon" url="pages/coupon/coupon">
+      <view class="item-left">
+        <image src="images/coupon-1.png"></image>
+        <view>推荐给朋友</view>
+      </view>
+      <view class="item-right">
+        <view class="my-item-coupon-count">{{userCouponCount > 0 ? userCouponCount+'张' : ''}}</view>
+        <view class="arrow">
+          <image src="../../images/arrow-r.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator class="item my-address" url="pages/address/address">
+      <view class="item-left">
+        <image src="images/address-1.png" class='small'></image>
+        <view>我的地址簿</view>
+      </view>
+      <view class="item-right">
+        <view class="arrow">
+          <image src="../../images/arrow-r.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator class="item my-fetch-code" url="pages/myCode/mycode">
+      <view class="item-left">
+        <image src="images/code-1.png"></image>
+        <view>帮助中心</view>
+      </view>
+      <view class="item-right">
+        <view class="my-item-coupon-count" wx:if="{{userInfo.qrcode_count}}">{{userInfo.qrcode_count}}个</view>
+        <view class="arrow">
+          <image src="../../images/arrow-r.png"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="background-gray"></view>
+  <view class="item-list">
+    
+    <navigator url="pages/couponCenter/couponCenter" class="item">
+      <view class="item-left">
+        <image src="images/vou-1@2x.png"></image>
+        <view>反馈建议</view>
+      </view>
+      <view class="item-right">
+        <view class="arrow">
+          <image src="../../images/arrow-r.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <view class="item" catchtap='phoneCall'>
+      <view class="item-left">
+        <image src="images/custom-1.png"></image>
+        <view>我的客服</view>
+      </view>
+      <view class="item-right">
+        <view class="arrow">
+          <image src="../../images/arrow-r.png"></image>
+        </view>
+      </view>
+    </view>
+    <navigator url="pages/freezerAddress/freezerAddress" class="item">
+      <view class="item-left">
+        <image src=images/distr-1.png "></image>
+        <view>冷柜分布</view>
+      </view>
+      <view class="item-right ">
+        <view class="arrow "> <image src="../../images/arrow-r.png "></image> </view>
+      </view>
+    </navigator>
+  </view>
+</view>

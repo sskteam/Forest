@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <view class='msg_box'>
+      <view class='box_conter'>
+          <view class='msg'>
+            <view class='gettit'>取货码：<text class='getCode'>40540</text></view>
+            <view class='gettit'>冷柜地址<image src='../img/loc.png' class='img_ico'></image></view>
+          </view>
+          <view class='msg msg1' >
+          <view class='gettit'>快递员：<text  class='getCode'>李东</text><text class='gettit'>(中通快递)</text></view>
+          <view><image src='../img/phone.png' class='img_ico'></image></view>
+        </view>
+        
+      </view>
+      <view class='more'>
+        查看更多详情
+      </view>
+    </view>
+  </view>
+</view>
